@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function NavItem({pic}) {
+export default function NavItem({icon}) {
   return (
     <li className='nav-item'>
-      <img src={pic} alt="navigation" />
+      <img src={icon} alt="navigation" />
     </li>
   )
 }
