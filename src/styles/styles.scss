@@ -1,0 +1,43 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Fichiers */
+@import '_variables.scss';
+@import '_header.scss';
+@import './nav/_nav.scss';
+@import './nav/_navitem.scss';
+
+/* Style général */
+body, *{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
+
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.wrapper{
+    position: relative;
+    max-width: 1240px;
+    width: 95%;
+    margin: auto;
+    flex: 1;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+ul{
+    list-style: none;
+}

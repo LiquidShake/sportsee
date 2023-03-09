@@ -1,0 +1,23 @@
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    padding: 59px 26px 59px 27px;
+    background: $black;
+    color: $white;
+    ul{
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+    }
+    p{
+        position: absolute;
+        bottom: 140px;
+        width: max-content;
+        transform: rotate(-90deg);
+        font-size: 12px;
+    }
+}
