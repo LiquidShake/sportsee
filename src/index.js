@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/styles.scss';
 import Header from './components/Header';
 import SideNav from './components/SideNav';
@@ -12,7 +13,12 @@ root.render(
   <React.StrictMode>
     <Header />
     <SideNav />
-    <Dashboard />
+    <Router>
+      <Routes>
+        <Route path="/user/:id" element={<Dashboard />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
+
 

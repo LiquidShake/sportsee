@@ -11,7 +11,7 @@ import zen from '../img/zen.svg'
  * @returns {HTMLElement}
  */
 export default function Icon({name, bgcolor}) {
-    const bgs = ['white', 'black', 'red-light', 'blue-light', 'yellow-light', 'pink-light'];
+    const bgs = ['white', 'red-light', 'blue-light', 'yellow-light', 'pink-light'];
     const images = {'cycle': cycle, 'dumbbells': dumbbells, 'swim': swim, 'zen': zen};
     
     if(!bgcolor || !bgs.contains(bgcolor)){
