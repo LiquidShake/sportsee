@@ -8,16 +8,17 @@ import Dashboard from './components/Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
 root.render(
   <React.StrictMode>
     <Header />
     <SideNav />
-    <Router>
-      <Routes>
-        <Route path="/user/:id" element={<Dashboard />} />
-      </Routes>
-    </Router>
+    <div className='wrapper dashboard'>
+      <Router>
+        <Routes>
+          <Route path="/user/:id" element={<Dashboard />} />
+        </Routes>
+      </Router>
+    </div>
   </React.StrictMode>
 );
 

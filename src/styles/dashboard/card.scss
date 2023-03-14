@@ -1,0 +1,13 @@
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FBFBFB;
+    padding: 20px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    .quantity{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

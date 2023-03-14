@@ -1,0 +1,36 @@
+.dashboard{
+    padding-left: 120px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 190px) 210px;
+    grid-template-rows: 90px 320px 195px;
+    grid-template-areas:
+        "a a a a"
+        "b b b c"
+        "d e f c";
+    h1{
+        margin-top: 20px;
+        span{
+            color: #FF0000;
+        }
+    }
+    &>div{
+        grid-area: a;
+    }
+    #daily-activity{
+        grid-area: b;
+        grid-column: span 3;
+    }
+    #average-session{
+        grid-area: d;
+    }
+    #performances{
+        grid-area: e;
+    }
+    #score{
+        grid-area: f;
+    }
+    #keydata{
+        grid-area: c;
+    }
+}

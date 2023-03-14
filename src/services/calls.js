@@ -14,12 +14,12 @@ export function getActivity(userId){
 }
 
 export function getPerformance(userId){
-  const currentUser = performance.find(user => user.id === Number(userId));
+  const currentUser = performance.find(user => user.userId === Number(userId));
   return currentUser;
 }
 
 export function getSessions(userId){
-  const currentUser = sessions.find(user => user.id === Number(userId));
+  const currentUser = sessions.find(user => user.userId === Number(userId));
   return currentUser;
 }
 

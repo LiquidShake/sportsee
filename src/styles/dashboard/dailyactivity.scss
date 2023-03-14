@@ -1,0 +1,61 @@
+#daily-activity{
+    position: relative;
+    background-color: #FBFBFB;
+    padding: 24px 32px;
+    border-radius: 5px;
+    h2{
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .barchart_legend{
+        position: absolute;
+        top: -25px;
+        right: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px ;
+        font-weight: 500;
+        width: 277px;
+    }
+    .dot{
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            left: -20px;
+            top: 3px;
+        }
+        &.dot_weight::before{
+            background-color: #282D30;
+        }
+        &.dot_calories::before{
+            background-color: #E60000;
+        }
+        
+    }
+    
+    
+    .span_weight, .span_calories{
+        color: #74798C;
+        font-size: 15px;
+    }
+    
+    .custom-tooltip{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        color: white;
+        background-color: #E60000;
+        width: 39px;
+        height: 63px;
+        font-size: 7px;
+    }
+}

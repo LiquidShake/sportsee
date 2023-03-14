@@ -1,0 +1,27 @@
+#average-session{
+    position: relative;
+    background-color: #FF0000;
+    border-radius: 5px;
+    h2{
+        position: absolute;
+        z-index: 1;
+        top: 15px;
+        left: 15px;
+        font-weight: 500;
+        font-size: 15px;
+        color: #FFFFFF;
+        opacity: .5;
+    }
+    .custom-tooltip-duration{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 39px;
+        height: 25px;
+        color: black;
+        font-size: 8px;
+        font-weight: 500;
+        background-color: #FFFFFF;
+    }
+}
