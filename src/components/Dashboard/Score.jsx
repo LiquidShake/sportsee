@@ -5,13 +5,22 @@ import {
 } from 'recharts'
 import '../../styles/dashboard/score.scss';
 
-export default function Score( {userInfos} ) {
+/**
+ * A radial line chart that display the score of the user for the day
+ * @param {Object} userData 
+ * @returns {JSX}
+ */
+export default function Score( {userData} ) {
 
+    /**
+     * format the data for chart uses
+     * @returns {Object} dataToUse
+     */
     const formatedData = () =>{
         return [
             {
                 name : "score",
-                value : userInfos.todayScore * 100,
+                value : userData.todayScore * 100,
                 fill : "#FF0000"
             },
             {
@@ -26,7 +35,7 @@ export default function Score( {userInfos} ) {
         <section id="score">
             <h2>Score</h2>
             <p className="score-sentence">
-                <span className="percentage">{userInfos.todayScore*100 + "%"}</span>
+                <span className="percentage">{userData.todayScore*100 + "%"}</span>
                 de votre objectif
             </p>
 

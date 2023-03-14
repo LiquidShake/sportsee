@@ -9,10 +9,20 @@ import {
   Legend,
 } from "recharts";
 import '../../styles/dashboard/dailyactivity.scss';
-export default function DailyActivity( {userInfos} ) {
 
+/**
+ * A bar chart that display a bar for weight and a bar for burned calories for every day
+ * @param {Object} userActivity
+ * @returns {JSX} React Functionnal Component
+ */
+export default function DailyActivity( {userActivity} ) {
+
+  /**
+   * format the data for chart uses
+   * @returns {Object} dataToUse
+   */
   const formatedData = ()=>{
-    const dataToUse = userInfos.sessions.map((data)=>{
+    const dataToUse = userActivity.sessions.map((data)=>{
       let day = new Date(data.day)
       return {
         day : `${day.getDate()}`,
@@ -23,6 +33,12 @@ export default function DailyActivity( {userInfos} ) {
     return dataToUse
   }
 
+  /**
+   * create a custom tooltip with custom content for the chart
+   * @param {boolean} active - if the tootltip is active or not 
+   * @param {Array} payload - The source data of the content to be displayed in the tooltip
+   * @returns {HTML} the tooltip
+   */
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
@@ -36,6 +52,10 @@ export default function DailyActivity( {userInfos} ) {
     return null;
   };
 
+  /**
+   * display custom legend for the chart
+   * @returns {HTML} the legend
+   */
   const renderLegend = () =>{
     return (
       <ul className="barchart_legend">
@@ -51,7 +71,7 @@ export default function DailyActivity( {userInfos} ) {
         <BarChart
           width={610}
           height={250}
-          data={userInfos.sessions && formatedData()}
+          data={userActivity.sessions && formatedData()}
           barGap={8}
           maxBarSize={7}
           barCategoryGap = "35%"

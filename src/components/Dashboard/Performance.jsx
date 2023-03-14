@@ -7,11 +7,19 @@ import {
 } from "recharts"
 import '../../styles/dashboard/performances.scss';
 
+/**
+ * A radar chart that display the performances of the user
+ * @param {Object} userPerformance 
+ * @returns {JSX}
+ */
+export default function Performance( {userPerformance} ) {
 
-export default function Performance( {userInfos} ) {
-
+    /**
+     * format the data for chart uses
+     * @returns {Object} dataToUse
+     */
     function formatedData() {
-        const dataToUSe = userInfos.data.reverse().map((object) => {
+        const dataToUSe = userPerformance.data.reverse().map((object) => {
             if (object.kind === 1) {
                 return {
                     kind: 'Cardio',
@@ -62,7 +70,7 @@ export default function Performance( {userInfos} ) {
                 width={190}
                 height={195}
                 outerRadius={75}
-                data={userInfos.data && formatedData()}
+                data={userPerformance.data && formatedData()}
             >
                 <PolarGrid radialLines = {false} />
                 <PolarAngleAxis

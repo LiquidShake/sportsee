@@ -1,6 +1,10 @@
 import React from 'react'
 import Icon from './Icon'
 
+/**
+ * The aside nav bar of the app
+ * @returns {HTMLElement}
+ */
 export default function SideNav() {
   return (
     <nav>

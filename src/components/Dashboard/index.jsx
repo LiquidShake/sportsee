@@ -12,7 +12,10 @@ import Performance from './Performance'
 import Score from './Score'
 import '../../styles/dashboard/dashboard.scss';
 
-
+/**
+ * Display the dashboard for a user
+ * @returns {JSX}
+ */
 export default function Dashboard() {
 
   const {id} = useParams()
@@ -27,11 +30,11 @@ export default function Dashboard() {
       <h1>Bonjour <span>{userData.userInfos.firstName}</span></h1>
       <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
     </div>
-      <DailyActivity userInfos={userActivity} />
-      <AverageSession userInfos={userSessions} />
-      <Performance userInfos={userPerformance} />
-      <Score userInfos={userData} />
-      <KeyData userInfos={userData.keyData} />
+      <DailyActivity userActivity={userActivity} />
+      <AverageSession userSessions={userSessions} />
+      <Performance userPerformance={userPerformance} />
+      <Score userData={userData} />
+      <KeyData keyData={userData.keyData} />
     </>
   )
 }

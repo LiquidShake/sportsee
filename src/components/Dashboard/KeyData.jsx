@@ -1,32 +1,37 @@
 import React from 'react'
 import Card from './Card'
 
-export default function KeyData( {userInfos} ) {
+/**
+ * Display the cards from key data
+ * @param {Object} keyData 
+ * @returns {JSX}
+ */
+export default function KeyData( {keyData} ) {
     return (
         <section id="keydata">
             <Card
-                quantity={userInfos.calorieCount}
+                quantity={keyData.calorieCount}
                 unit="kCal"
                 text="Calories"
                 iconName="fire"
                 iconColor="red-light"
             />
             <Card
-                quantity={userInfos.proteinCount}
+                quantity={keyData.proteinCount}
                 unit="g"
                 text="Proteines"
                 iconName="chicken"
                 iconColor="blue-light"
             />
             <Card
-                quantity={userInfos.carbohydrateCount}
+                quantity={keyData.carbohydrateCount}
                 unit="g"
                 text="Glucides"
                 iconName="apple"
                 iconColor="yellow-light"
             />
             <Card
-                quantity={userInfos.lipidCount}
+                quantity={keyData.lipidCount}
                 unit="g"
                 text="Lipides"
                 iconName="burger"

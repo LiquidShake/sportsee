@@ -11,8 +11,8 @@ import '../styles/icon.scss';
 
 /**
  * 
- * @param {name} string 
- * @param {bgcolor} string 
+ * @param {string} name - the name of the icon 
+ * @param {string} bgcolor - the background color of the icon
  * @returns {HTMLElement}
  */
 export default function Icon({name, bgcolor}) {

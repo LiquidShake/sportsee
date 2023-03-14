@@ -1,6 +1,10 @@
 import React from 'react'
 import logo from '../logo.png';
 
+/**
+ * The header of the app
+ * @returns {HTMLElement}
+ */
 export default function Header() {
   document.title = 'SportSee - Tableau de Bord';
   return (

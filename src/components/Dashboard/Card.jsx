@@ -2,6 +2,15 @@ import React from 'react'
 import Icon from '../Icon'
 import '../../styles/dashboard/card.scss';
 
+/**
+ * Display a card with and icon, background color for this icon, and text
+ * @param {number} quantity 
+ * @param {string} unit 
+ * @param {string} text 
+ * @param {string} iconName 
+ * @param {string} iconColor 
+ * @returns {JSX}
+ */
 export default function Card( {quantity, unit, text, iconName, iconColor} ) {
     return (
         <article className='card'>

@@ -9,10 +9,19 @@ import {
 } from "recharts";
 import '../../styles/dashboard/averagesession.scss';
 
-export default function AverageSession( {userInfos} ) {
+/**
+ * A line chart that display average sessions time of the user for each day
+ * @param {Object} userSessions 
+ * @returns {JSX}
+ */
+export default function AverageSession( {userSessions} ) {
 
+    /**
+     * format the data for chart uses
+     * @returns {Object} dataToUse
+     */
     function formatedData() {
-        const dataToUse = userInfos.sessions.map((data) => {
+        const dataToUse = userSessions.sessions.map((data) => {
             if (data.day === 1) {
                 return {
                     day: "L",
@@ -62,6 +71,12 @@ export default function AverageSession( {userInfos} ) {
         return dataToUse;
     }
 
+    /**
+     * create a custom tooltip with custom content for the chart
+     * @param {boolean} active - if the tootltip is active or not 
+     * @param {Array} payload - The source data of the content to be displayed in the tooltip
+     * @returns {HTML} the tooltip
+     */
     const CustomTooltip = ({ active, payload}) => {
         if (active && payload && payload.length) {
           return (
@@ -80,7 +95,7 @@ export default function AverageSession( {userInfos} ) {
             <LineChart
                 width={190}
                 height={195}
-                data={userInfos.sessions && formatedData()}
+                data={userSessions.sessions && formatedData()}
                 >
                 <CartesianGrid
                     strokeDasharray="4 4"
