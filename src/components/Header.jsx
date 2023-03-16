@@ -11,7 +11,7 @@ export default function Header() {
     <header>
         <img src={logo} alt="logo sportsee" />
         <ul>
-            <li className='header-item'>Accueil</li>
+            <li className='header-item'><a href="/">Accueil</a></li>
             <li className='header-item'>Profil</li>
             <li className='header-item'>Régalages</li>
             <li className='header-item'>Communauté</li>

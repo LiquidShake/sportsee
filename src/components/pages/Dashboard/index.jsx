@@ -6,13 +6,13 @@ import {
   // getPerformance,
   getDataFromAPI,
 
-} from '../../services/calls'
+} from '../../../services/calls'
 import AverageSession from './AverageSession'
 import DailyActivity from './DailyActivity'
 import KeyData from './KeyData'
 import Performance from './Performance'
 import Score from './Score'
-import '../../styles/dashboard/dashboard.scss';
+import '../../../styles/dashboard/dashboard.scss';
 import { useState, useEffect } from 'react'
 
 /**
@@ -45,8 +45,6 @@ export default function Dashboard() {
       }
     );
   }, [id]);
-
-  console.log("state", userDataState)
 
   return (
     <div className='wrapper dashboard'>

@@ -3,7 +3,7 @@ import {
     RadialBarChart,
     RadialBar
 } from 'recharts'
-import '../../styles/dashboard/score.scss';
+import '../../../styles/dashboard/score.scss';
 
 /**
  * A radial line chart that display the score of the user for the day

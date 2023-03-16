@@ -7,7 +7,7 @@ import {
     CartesianGrid,
     Tooltip,
 } from "recharts";
-import '../../styles/dashboard/averagesession.scss';
+import '../../../styles/dashboard/averagesession.scss';
 
 /**
  * A line chart that display average sessions time of the user for each day

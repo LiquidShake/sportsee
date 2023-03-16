@@ -1,6 +1,6 @@
 import React from 'react'
-import Icon from '../Icon'
-import '../../styles/dashboard/card.scss';
+import Icon from '../../Icon'
+import '../../../styles/dashboard/card.scss';
 
 /**
  * Display a card with and icon, background color for this icon, and text

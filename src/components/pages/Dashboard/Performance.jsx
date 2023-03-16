@@ -5,7 +5,7 @@ import {
     PolarAngleAxis,
     Radar,
 } from "recharts"
-import '../../styles/dashboard/performances.scss';
+import '../../../styles/dashboard/performances.scss';
 
 /**
  * A radar chart that display the performances of the user

@@ -26,6 +26,7 @@ body, *{
     max-width: 1240px;
     width: 95%;
     margin: auto;
+    padding-left: 120px;
     flex: 1;
 }
 
@@ -39,4 +40,11 @@ a{
 
 ul{
     list-style: none;
+}
+
+h1{
+    margin-top: 20px;
+    span{
+        color: #FF0000;
+    }
 }

@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import '../../styles/dashboard/dailyactivity.scss';
+import '../../../styles/dashboard/dailyactivity.scss';
 
 /**
  * A bar chart that display a bar for weight and a bar for burned calories for every day
