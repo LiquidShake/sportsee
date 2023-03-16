@@ -41,8 +41,6 @@ export const parseUserAverageSessions = (userSessions) => {
 
 export const parseUserPerformance = (userPerformance) => {
 
-    console.log(userPerformance);
-
     const kinds = {
         1: 'Cardio',
         2: 'Energy',

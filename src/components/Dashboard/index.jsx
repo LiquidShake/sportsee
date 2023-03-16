@@ -46,7 +46,7 @@ export default function Dashboard() {
     );
   }, [id]);
 
-  console.log('userDataState : ', userDataState);
+  console.log("state", userDataState)
 
   return (
     <div className='wrapper dashboard'>

@@ -52,6 +52,9 @@ export default function DailyActivity( {userActivity} ) {
   return (
     <section id="daily-activity">
       <h2>Activité quotidienne</h2>
+
+      {userActivity && (
+
         <BarChart
           width={610}
           height={250}
@@ -120,6 +123,8 @@ export default function DailyActivity( {userActivity} ) {
             iconSize={8}
             content={renderLegend}/>
         </BarChart>
+      )}
+      
     </section>
   );
 }

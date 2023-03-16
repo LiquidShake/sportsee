@@ -10,28 +10,28 @@ export default function KeyData( {keyData} ) {
     return (
         <section id="keydata">
             <Card
-                quantity={keyData.calorieCount}
+                quantity={keyData?.calorieCount}
                 unit="kCal"
                 text="Calories"
                 iconName="fire"
                 iconColor="red-light"
             />
             <Card
-                quantity={keyData.proteinCount}
+                quantity={keyData?.proteinCount}
                 unit="g"
                 text="Proteines"
                 iconName="chicken"
                 iconColor="blue-light"
             />
             <Card
-                quantity={keyData.carbohydrateCount}
+                quantity={keyData?.carbohydrateCount}
                 unit="g"
                 text="Glucides"
                 iconName="apple"
                 iconColor="yellow-light"
             />
             <Card
-                quantity={keyData.lipidCount}
+                quantity={keyData?.lipidCount}
                 unit="g"
                 text="Lipides"
                 iconName="burger"
