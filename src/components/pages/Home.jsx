@@ -2,7 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../styles/home.scss';
 
-export default function f() {
+/**
+ * Display the Home Page
+ * @returns {JSX}
+ */
+export default function Home() {
   return (
     <div className='wrapper' id="home">
       <h1>Bienvenue sur <span>SportSee</span></h1>

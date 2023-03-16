@@ -1,3 +1,8 @@
+/**
+ * Format the main data of a user to readable data for the components
+ * @param {Object} userData 
+ * @returns {Object}
+ */
 export const parseUserData = (userData) => {
     return ({
         firstname: userData.userInfos.firstName,
@@ -6,6 +11,11 @@ export const parseUserData = (userData) => {
     })
 }
 
+/**
+ * Format the activity data of a user to readable data for the components
+ * @param {Object} userData 
+ * @returns {Object}
+ */
 export const parseUserActivity = (userActivity) => {
     const parsedData = userActivity.sessions.map((data)=>{
         let day = new Date(data.day)
@@ -18,6 +28,11 @@ export const parseUserActivity = (userActivity) => {
     return parsedData
 }
 
+/**
+ * Format the average sessions data of a user to readable data for the components
+ * @param {Object} userData 
+ * @returns {Object}
+ */
 export const parseUserAverageSessions = (userSessions) => {
     const days = {
         1: 'L',
@@ -39,6 +54,11 @@ export const parseUserAverageSessions = (userSessions) => {
     return parsedData;
 }
 
+/**
+ * Format the performance data of a user to readable data for the components
+ * @param {Object} userData 
+ * @returns {Object}
+ */
 export const parseUserPerformance = (userPerformance) => {
 
     const kinds = {

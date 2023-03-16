@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 
+/**
+ * Display the 404 Page
+ * @returns {JSX}
+ */
 export default function NotFound() {
   document.title = `SportSee - 404`
   return (
