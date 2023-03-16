@@ -2,6 +2,12 @@ import mainData from '../mock/user_data.json'
 import activity from '../mock/user_activity.json'
 import performance from '../mock/user_performance.json'
 import sessions from '../mock/user_session.json'
+import {
+  parseUserData,
+  parseUserActivity,
+  parseUserAverageSessions,
+  parseUserPerformance
+} from './modelisation'
 
 export function getMainData(userId){
   const currentUser = mainData.find(user => user.id === Number(userId));
@@ -23,58 +29,21 @@ export function getSessions(userId){
   return currentUser;
 }
 
-// export async function getUserMainData(userId, setStatistics) {
-//     try{
-//       const response = await fetch (`http://localhost:3000/user/${userId}`);
-//       const results = await response.json();
-//       setStatistics(results.data);
-//     }
-//     catch(err){
-//       console.log(err);
-//     }
-//     finally{
-//       console.log("Fetch completed");
-//     }
-// }
+export const getDataFromAPI = async (userId) => {
+  const userData = await (await fetch(`http://localhost:3000/user/${userId}`)).json();
+  const userActivity = await (await fetch(`http://localhost:3000/user/${userId}/activity`)).json();
+  const userAverageSessions = await (await fetch(`http://localhost:3000/user/${userId}/average-sessions`)).json();
+  const userPerformance = await (await fetch(`http://localhost:3000/user/${userId}/performance`)).json();
 
-// export async function getUserActivity(userId, setStatistics) {
-//     try{
-//       const response = await fetch (`http://localhost:3000/user/${userId}/activity`);
-//       const results = await response.json();
-//       setStatistics(results.data.sessions);
-//     }
-//     catch(err){
-//       console.log(err);
-//     }
-//     finally{
-//       console.log("Fetch completed");
-//     }
-// }
+  const userDataParsed = parseUserData(userData.data)
+  const userActivityParsed = parseUserActivity(userActivity.data)
+  const userAverageSessionsParsed = parseUserAverageSessions(userAverageSessions.data)
+  const userPerformanceParsed = parseUserPerformance(userPerformance.data)
 
-// export async function getUserPerformance(userId, setStatistics) {
-//     try{
-//       const response = await fetch (`http://localhost:3000/user/${userId}/performance`);
-//       const results = await response.json();
-//       setStatistics(results.data.data);
-//     }
-//     catch(err){
-//       console.log(err);
-//     }
-//     finally{
-//       console.log("Fetch completed");
-//     }
-// }
-
-// export async function getUserSessions(userId, setStatistics) {
-//     try{
-//       const response = await fetch (`http://localhost:3000/user/${userId}/average-sessions`);
-//       const results = await response.json();
-//       setStatistics(results.data.sessions);
-//     }
-//     catch(err){
-//       console.log(err);
-//     }
-//     finally{
-//       console.log("Fetch completed");
-//     }
-// }
+  return ({
+    userDataParsed,
+    userActivityParsed,
+    userAverageSessionsParsed,
+    userPerformanceParsed
+  });
+};

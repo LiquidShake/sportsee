@@ -17,61 +17,6 @@ import '../../styles/dashboard/averagesession.scss';
 export default function AverageSession( {userSessions} ) {
 
     /**
-     * format the data for chart uses
-     * @returns {Object} dataToUse
-     */
-    function formatedData() {
-        const dataToUse = userSessions.sessions.map((data) => {
-            if (data.day === 1) {
-                return {
-                    day: "L",
-                    sessionLength: data.sessionLength,
-                };
-            }
-            else if (data.day === 2) {
-                return {
-                    day: "M",
-                    sessionLength: data.sessionLength,
-                };
-            }
-            else if (data.day === 3) {
-                return {
-                    day: "M",
-                    sessionLength: data.sessionLength,
-                };
-            }
-            else if (data.day === 4) {
-                return {
-                    day: "J",
-                    sessionLength: data.sessionLength,
-                };
-            }
-            else if (data.day === 5) {
-                return {
-                    day: "V",
-                    sessionLength: data.sessionLength,
-                };
-            }
-            else if (data.day === 6) {
-                return {
-                    day: "S",
-                    sessionLength: data.sessionLength,
-                };
-            }
-            else if (data.day === 7) {
-                return {
-                    day: "D",
-                    sessionLength: data.sessionLength,
-                };
-            }
-            else {
-                return undefined;
-            }
-        });
-        return dataToUse;
-    }
-
-    /**
      * create a custom tooltip with custom content for the chart
      * @param {boolean} active - if the tootltip is active or not 
      * @param {Array} payload - The source data of the content to be displayed in the tooltip
@@ -87,7 +32,7 @@ export default function AverageSession( {userSessions} ) {
         }
       
         return null;
-      };
+    };
 
     return (
         <section id="average-session">
@@ -95,7 +40,7 @@ export default function AverageSession( {userSessions} ) {
             <LineChart
                 width={190}
                 height={195}
-                data={userSessions.sessions && formatedData()}
+                data={userSessions}
                 >
                 <CartesianGrid
                     strokeDasharray="4 4"

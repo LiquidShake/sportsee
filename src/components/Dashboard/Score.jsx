@@ -7,26 +7,24 @@ import '../../styles/dashboard/score.scss';
 
 /**
  * A radial line chart that display the score of the user for the day
- * @param {Object} userData 
+ * @param {Number} score - percentage
+ * @param {String} color - HEX color
  * @returns {JSX}
  */
-export default function Score( {userData} ) {
+export default function Score( {score, color} ) {
 
     /**
-     * format the data for chart uses
+     * format the data for chart uses, the second object is the total score to scale the chart
      * @returns {Object} dataToUse
      */
     const formatedData = () =>{
         return [
             {
-                name : "score",
-                value : userData.todayScore * 100,
-                fill : "#FF0000"
+                value : score,
+                fill : color
             },
             {
-                name : "score 2",
                 value : 100,
-                fill : "#FBFBFB"
             }
         ]
     }
@@ -35,7 +33,7 @@ export default function Score( {userData} ) {
         <section id="score">
             <h2>Score</h2>
             <p className="score-sentence">
-                <span className="percentage">{userData.todayScore*100 + "%"}</span>
+                <span className="percentage">{score + "%"}</span>
                 de votre objectif
             </p>
 
@@ -49,7 +47,6 @@ export default function Score( {userData} ) {
             >
 				<RadialBar
                     minAngle={1}
-                    background={{fill : "#FBFBFB"}}
                     dataKey="value"
                     cornerRadius={50}
                 />

@@ -12,13 +12,11 @@ root.render(
   <React.StrictMode>
     <Header />
     <SideNav />
-    <div className='wrapper dashboard'>
-      <Router>
-        <Routes>
-          <Route path="/user/:id" element={<Dashboard />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/user/:id" element={<Dashboard />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

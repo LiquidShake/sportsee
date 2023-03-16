@@ -16,6 +16,7 @@ import '../styles/icon.scss';
  * @returns {HTMLElement}
  */
 export default function Icon({name, bgcolor}) {
+    /* List of allowed backgrounds */
     const bgs = [
         'white',
         'red-light',
@@ -23,6 +24,8 @@ export default function Icon({name, bgcolor}) {
         'yellow-light',
         'pink-light'
     ];
+
+    /* List of allowed images */
     const images = {
         'cycle': cycle,
         'dumbbells': dumbbells,
@@ -34,6 +37,7 @@ export default function Icon({name, bgcolor}) {
         'burger': burger
     };
     
+    /* Default background is white */
     if(!bgcolor || !bgs.includes(bgcolor)){
         bgcolor = 'white';
     }

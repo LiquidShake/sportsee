@@ -12,26 +12,10 @@ import '../../styles/dashboard/dailyactivity.scss';
 
 /**
  * A bar chart that display a bar for weight and a bar for burned calories for every day
- * @param {Object} userActivity
+ * @param {Array} userActivity - Array of objects representing the weight and calories burned each day
  * @returns {JSX} React Functionnal Component
  */
 export default function DailyActivity( {userActivity} ) {
-
-  /**
-   * format the data for chart uses
-   * @returns {Object} dataToUse
-   */
-  const formatedData = ()=>{
-    const dataToUse = userActivity.sessions.map((data)=>{
-      let day = new Date(data.day)
-      return {
-        day : `${day.getDate()}`,
-        kilogram : data.kilogram,
-        calories : data.calories
-      }
-    })
-    return dataToUse
-  }
 
   /**
    * create a custom tooltip with custom content for the chart
@@ -71,7 +55,7 @@ export default function DailyActivity( {userActivity} ) {
         <BarChart
           width={610}
           height={250}
-          data={userActivity.sessions && formatedData()}
+          data={userActivity}
           barGap={8}
           maxBarSize={7}
           barCategoryGap = "35%"
