@@ -23,13 +23,13 @@ Open a terminal at the location where you cloned the repository and type :
 
 ## 2. Frontend
 
-Please clone the following repository on your computer :
+Please clone the following repository on your computer :<br />
 <code>git clone</code> https://github.com/LiquidShake/sportsee
 
 Open a terminal at the location where you cloned the repository and type :
-- <code>npm start</code> That will allow you to run the app on your localhost
-Default port of running is 3000 but is already taken by the API, so you might see in your terminal a message like :
-<code>Would you like to run the app on another port instead? >> (Y/n)</code>
+- <code>npm start</code> That will allow you to run the app on your localhost.<br />
+Default port of running is 3000 but is already taken by the API, so you might see in your terminal a message like :<br />
+<code>Would you like to run the app on another port instead? >> (Y/n)</code><br />
 If so, please accept the message by typing <code>Y</code> so the app will run on the next available port of your localhost (might be <code>:3001</code>)
 
 ## 3. Navigate through the app
