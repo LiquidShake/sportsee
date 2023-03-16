@@ -5,16 +5,16 @@ Please follow the instructions bellow step by step to access the Home Page of th
 
 # Prerequisites
 
-NodeJS v17.7.1 or higher
-Yarn
-NPM
-A minimal resolution of 1024*780 on your screen
+- NodeJS v17.7.1 or higher
+- Yarn
+- NPM
+- A minimal resolution of 1024*780 on your screen
 
 # Installation
 
 ## 1. Backend and API
 
-Please clone the folllowing repository on your computer :
+Please clone the folllowing repository on your computer : \n
 <code>git clone</code> https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
 Open a terminal at the location where you cloned the repository and type :
