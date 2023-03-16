@@ -14,7 +14,7 @@ Please follow the instructions bellow step by step to access the Home Page of th
 
 ## 1. Backend and API
 
-Please clone the folllowing repository on your computer : \n
+Please clone the folllowing repository on your computer : <br />
 <code>git clone</code> https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
 Open a terminal at the location where you cloned the repository and type :
