@@ -55,10 +55,18 @@ export function getSessions(userId){
  * @returns {Object}
  */
 export const getDataFromAPI = async (userId) => {
-  const userData = await (await fetch(`http://localhost:3000/user/${userId}`)).json();
-  const userActivity = await (await fetch(`http://localhost:3000/user/${userId}/activity`)).json();
-  const userAverageSessions = await (await fetch(`http://localhost:3000/user/${userId}/average-sessions`)).json();
-  const userPerformance = await (await fetch(`http://localhost:3000/user/${userId}/performance`)).json();
+  const userData = await (
+      await fetch(`http://localhost:3000/user/${userId}`)
+    ).json();
+  const userActivity = await (
+      await fetch(`http://localhost:3000/user/${userId}/activity`)
+    ).json();
+  const userAverageSessions = await (
+      await fetch(`http://localhost:3000/user/${userId}/average-sessions`)
+    ).json();
+  const userPerformance = await (
+      await fetch(`http://localhost:3000/user/${userId}/performance`)
+    ).json();
 
   const userDataParsed = parseUserData(userData.data)
   const userActivityParsed = parseUserActivity(userActivity.data)
