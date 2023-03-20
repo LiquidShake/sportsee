@@ -35,3 +35,9 @@ If so, please accept the message by typing <code>Y</code> so the app will run on
 ## 3. Navigate through the app
 
 You have now access to the app and are directly on the Home Page, enjoy !
+
+# To use the mocked data instead of API
+
+In the frontend environement go to src > components > Dashboard > index.jsx<br />
+ - Uncomment lines 3 to 6 and lines 30 to 48
+ - Comment lines 49 to 80
