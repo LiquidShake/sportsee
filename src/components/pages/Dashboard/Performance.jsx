@@ -5,11 +5,12 @@ import {
     PolarAngleAxis,
     Radar,
 } from "recharts"
+import PropTypes from 'prop-types';
 import '../../../styles/dashboard/performances.scss';
 
 /**
  * A radar chart that display the performances of the user
- * @param {Object} userPerformance 
+ * @param {Array} userPerformance 
  * @returns {JSX}
  */
 export default function Performance( {userPerformance} ) {
@@ -40,4 +41,8 @@ export default function Performance( {userPerformance} ) {
             </RadarChart>
         </section>
     )
+}
+
+Performance.propTypes = {
+    userPerformance: PropTypes.array
 }

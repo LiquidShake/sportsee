@@ -7,6 +7,7 @@ import fire from '../img/fire.svg'
 import chicken from '../img/chicken.svg'
 import apple from '../img/apple.svg'
 import burger from '../img/burger.svg'
+import PropTypes from 'prop-types';
 import '../styles/icon.scss';
 
 /**
@@ -50,4 +51,9 @@ export default function Icon({name, bgcolor}) {
             <img src={image} alt="icone" />
         </span>
     )
+}
+
+Icon.propTypes = {
+    name: PropTypes.string,
+    bgcolor: PropTypes.string
 }

@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
+import PropTypes from 'prop-types';
 import '../../../styles/dashboard/dailyactivity.scss';
 
 /**
@@ -127,4 +128,8 @@ export default function DailyActivity( {userActivity} ) {
       
     </section>
   );
+}
+
+DailyActivity.propTypes = {
+  userActivity: PropTypes.array
 }

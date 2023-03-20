@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from '../../Icon'
+import PropTypes from 'prop-types';
 import '../../../styles/dashboard/card.scss';
 
 /**
@@ -21,4 +22,12 @@ export default function Card( {quantity, unit, text, iconName, iconColor} ) {
             </div>
         </article>
     )
+}
+
+Card.propTypes = {
+    quantity: PropTypes.number,
+    unit: PropTypes.string,
+    text: PropTypes.string,
+    iconName: PropTypes.string,
+    iconColor: PropTypes.string,
 }

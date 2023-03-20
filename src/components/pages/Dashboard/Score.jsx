@@ -3,6 +3,7 @@ import {
     RadialBarChart,
     RadialBar
 } from 'recharts'
+import PropTypes from 'prop-types';
 import '../../../styles/dashboard/score.scss';
 
 /**
@@ -53,4 +54,9 @@ export default function Score( {score, color} ) {
 			</RadialBarChart>
         </section>
     )
+}
+
+Score.propTypes = {
+    score: PropTypes.number,
+    color: PropTypes.string
 }

@@ -16,7 +16,7 @@ import {
  */
 export function getMainData(userId){
   const currentUser = mainData.find(user => user.id === Number(userId));
-  return currentUser;
+  return parseUserData(currentUser);
 }
 
 /**
@@ -26,7 +26,7 @@ export function getMainData(userId){
  */
 export function getActivity(userId){
   const currentUser = activity.find(user => user.userId === Number(userId));
-  return currentUser;
+  return parseUserActivity(currentUser);
 }
 
 /**
@@ -36,7 +36,7 @@ export function getActivity(userId){
  */
 export function getPerformance(userId){
   const currentUser = performance.find(user => user.userId === Number(userId));
-  return currentUser;
+  return parseUserPerformance(currentUser);
 }
 
 /**
@@ -46,7 +46,7 @@ export function getPerformance(userId){
  */
 export function getSessions(userId){
   const currentUser = sessions.find(user => user.userId === Number(userId));
-  return currentUser;
+  return parseUserAverageSessions(currentUser);
 }
 
 /**

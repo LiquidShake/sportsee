@@ -8,10 +8,11 @@ import {
     Tooltip,
 } from "recharts";
 import '../../../styles/dashboard/averagesession.scss';
+import PropTypes from 'prop-types';
 
 /**
  * A line chart that display average sessions time of the user for each day
- * @param {Object} userSessions 
+ * @param {Array} userSessions 
  * @returns {JSX}
  */
 export default function AverageSession( {userSessions} ) {
@@ -89,4 +90,8 @@ export default function AverageSession( {userSessions} ) {
             </LineChart>
         </section>
     )
+}
+
+AverageSession.propTypes = {
+    userSessions: PropTypes.array
 }

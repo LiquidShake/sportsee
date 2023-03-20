@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import Card from './Card'
 
 /**
@@ -39,4 +40,8 @@ export default function KeyData( {keyData} ) {
             />
         </section>
     )
+}
+
+KeyData.propTypes = {
+    keyData: PropTypes.object
 }
